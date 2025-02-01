@@ -38,16 +38,34 @@ let arr3 = [2,2,2];
 // findIndex를 사용해야한다. 
 let arr4 = [1,2,3];
 arr4.findIndex(()=>{
-    if(item%2!==0) return true;
+    // if(item%2!==0) return true;
 });
 // 화살표함수로 더 간결하게 
 arr4.findIndex((item)=> item ===999);
 
+let arr5 = [
+    {name: "오민현"},
+    {name:"어니부기"}
 
+];
+
+//만약에 indexOf 로 위의 객체를 찾게되면, 
+// 찾지못해서 -1 을 반환하며, 
+console.log(arr5.indexOf("오민현"));
+
+// findIndex로 찾게 되면, 해당값을 찾을수 있다. 이 차이는 얕은비교와 , 깊은 비교의 차이다.
+ const finded2 = arr5.findIndex((item)=>item ==="오민현");
+
+console.log(finded2);
 
 //5. find
 // 모든 요소를 순회하면서 콜백함수를 만족하는 요소를 찾는데, 요소를 그대로 반환
 // 객체자체를 반환 
+
+
+
+console.log(arr5.find((item)=>item.name==="오민현"))
+
 
 
 
